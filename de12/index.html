@@ -22,6 +22,38 @@
         margin: 0; /* 内側の余白 */
         min-height: 100vh; /* 要素の高さの最小値を100％にする */
     }
+    /*外枠(はみ出た部分を隠す)*/
+    .wrap{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    /*横並びにする部分*/
+    .slideshow{
+        display: flex;
+        width: max-content;
+        animation: slideMove 20s linear infinite;
+    }
+    /*各スライドのタイトル*/
+    .content{
+        width: 400px;
+        height: 60px;
+        background-color: #d3d3d3;/*カラーコードlightgray*/
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*アニメーションの定義*/
+    @keyframes slideMove {
+        0%{
+            transform: translateX(-50%);
+        }
+    }
+    /*マウスを乗せたときに動きを止める*/
+    .slideshow:hover {
+        animation-play-state: paused;
+    }
     </style>
 </head>
 <body>
@@ -29,6 +61,21 @@
     <div style="text-align: center;"> <!-- 文字を中央に固定 -->
         <span style="font-size: 50px; color: #708090;">XBP</span><br>
     <span style="font-size: 20px; color: #708090;">Anthropology×Design×Technology×Business</span></div><br>
+
+    <div class="wrap">
+        <div class="slideshow">
+            <div class="content"><a href="../digi_fab/" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="../de12/" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="../digi_fab/" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="../de12/" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="../digi_fab/" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="../de12/" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">Topページ</a></div>
+            
+        </div>
+    </div>
 
     <h1>デザイン演習Ⅰ・Ⅱ</h1>
         <h2>HTMLに関すること</h2>
