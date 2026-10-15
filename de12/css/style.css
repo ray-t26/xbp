@@ -52,3 +52,18 @@ span.blackback{
     color: #efefef;
 }
 
+
+a {
+    color: #66F;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #33C;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F90;
+    text-decoration: underline;
+}
