@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="jp"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>XBP_Ray's de.web記録</title>
+    <style>
+    /* 上部の固定文字設定 */
+    .top-left-fixed{
+        position: fixed
+        top: 10px;
+        left: 10px;
+        font-size: 18px;
+        color: #708090; /* カラーコードslategray */
+        x-index: 9999; /* ほかの要素より手前に表示 */
+        background-color: #dcdcdc; /* カラーコードgainsboro */
+        padding: 4px 8px; /* 内側の余白 */
+        border-radius: 4px;
+    }
+    /* 背景色設定 */
+    body{
+        background-color: #fffafa; /* カラーコードsnow */
+        margin: 0; /* 内側の余白 */
+        min-height: 100vh; /* 要素の高さの最小値を100％にする */
+    }
+    /*外枠(はみ出た部分を隠す)*/
+    .wrap{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    /*横並びにする部分*/
+    .slideshow{
+        display: flex;
+        width: max-content;
+        animation: slideMove 20s linear infinite;
+    }
+    /*各スライドのタイトル*/
+    .content{
+        width: 400px;
+        height: 60px;
+        background-color: #d3d3d3;/*カラーコードlightgray*/
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*アニメーションの定義*/
+    @keyframes slideMove {
+        0%{
+            transform: translateX(-50%);
+        }
+    }
+    /*マウスを乗せたときに動きを止める*/
+    .slideshow:hover {
+        animation-play-state: paused;
+
+    </style>
+</head>
+<body>
+    <div class="top-left-fixed">Ray's Portfolio</div>
+    <div style="text-align: center;"> <!-- 文字を中央に固定 -->
+        <span style="font-size: 50px; color: #708090;">XBP</span><br>
+    <span style="font-size: 20px; color: #708090;">Anthropology×Design×Technology×Business</span></div><br>
+
+    <div class="wrap">
+        <div class="slideshow">
+            <div class="content"><a href="../digi_fab/index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="../digi_fab/index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+        </div>
+    </div>
+    <br>
+    
+    <span style="font-size: 30px; color: #708090;"> 【デザイン演習ⅠⅡ】Web記録 </span><br>
+
+    
+<br>
+<br>
+
+
+</body>
+</html>

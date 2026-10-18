@@ -55,6 +55,23 @@
     .slideshow:hover {
         animation-play-state: paused;
     }
+    /*画像横並びの設定*/
+    .image-gallery {
+        display: flex;         /* 横並びにする */
+        gap: 16px;             /* 画像と画像の間のすき間 */
+        justify-content: center; /* 中央に配置 */
+        margin-left: 32px; /*左側に間をあける*/
+    }
+    /* マウスを乗せたときの処理 */
+    .floating-img:hover {
+         /* Y軸（縦方向）に-10px移動させて上に浮かせる */
+        transform: translateY(-10px);
+      
+        /* ぼかした影をつけて立体感を出す */
+        /* 構造: 左右のズレ 上下のズレ ぼかしの強さ 影の色 */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
 
     </style>
 </head>
@@ -75,16 +92,20 @@
         </div>
     </div>
     <br>
-    <span style="font-size: 30px; color: #708090;"> デザイン演習Ⅰ・Ⅱ </span><br>
-        <h2>HTMLに関すること</h2></div>
-        <ol>
-            <li><a href="./hp1.html">htmlの基礎知識</a></li>
-            <li><a href="./hp2.html" target="_blank">htmlのwork</a></li>
-            <li><a href="./git1.html" >2026/10/13 gitのまとめ</a></li>
-            <li><a href="./html1.html" target="_blank">2026/10/13 htmlまとめ</a></li>
-            <li><a href="./test.html" target="_blank">テストページ</a></li>
-        </ol>
-        <h2>演習ノート一覧</h2>
+    <img src="./images/designseminar00.PNG" width="100%"><br>
+    <div class="image-gallery">
+        <a href="./index - web記録.html">
+            <img src="./images/Webkiroku01.PNG" width="90%" class="floating-img">
+        </a>
+        <a href="./index - 制作一覧.html">
+            <img src="./images/seisakukada02.PNG" width="90%" class="floating-img">
+        </a>
+        <a href="./index - 課題提出.html">
+            <img src="./images/seisakukadai03.PNG" width="90%" class="floating-img">
+        </a>
+        </div><br>
+    
+    <span style="font-size: 30px; color: #708090;"> デザイン演習とは </span><br>
 
     
 <br>
