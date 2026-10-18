@@ -57,11 +57,22 @@
         animation-play-state: paused;
     }
     /*画像横並びの設定*/
-    .image-gallery {
+    .image-link-box {
         display: flex;         /* 横並びにする */
-        gap: 16px;             /* 画像と画像の間のすき間 */
+        gap: 30px;             /* 画像と画像の間のすき間 */
         justify-content: center; /* 中央に配置 */
-        margin-left: 32px; /*左側に間をあける*/
+        margin: 0px 30px 10px 30px;
+    }
+    .image-link-box a {
+        display: block;      /* リンクのクリックエリアを画像全体に広げる */
+        max-width: 100%;     /* 親要素からはみ出さないようにする */
+    } 
+    /* 画像（imgタグ）のレスポンシブ対応 */
+    .image-link-box img {
+        width: 100%;         /* 幅いっぱいに広げる */
+        height: auto;        /* 縦横比を維持する */
+        vertical-align: bottom; /* 画像の下に謎の隙間ができるのを防ぐ */
+        justify-content: center;
     }
     /* マウスを乗せたときの処理 */
     .floating-img:hover {
@@ -95,15 +106,15 @@
     </div>
     <br>
     <img src="./images/designseminar00.PNG" width="100%"><br>
-    <div class="image-gallery">
+    <div class="image-link-box">
         <a href="./index - web記録.html">
-            <img src="./images/Webkiroku01.PNG" width="90%" class="floating-img">
+            <img src="./images/de01web.PNG" width="30%" class="floating-img">
         </a>
         <a href="./index - 制作一覧.html">
-            <img src="./images/seisakukada02.PNG" width="90%" class="floating-img">
+            <img src="./images/de02ichiran.PNG" width="30%" class="floating-img">
         </a>
         <a href="./index - 課題提出.html">
-            <img src="./images/seisakukadai03.PNG" width="90%" class="floating-img">
+            <img src="./images/de03kadai.PNG" width="30%" class="floating-img">
         </a>
         </div><br>
     
