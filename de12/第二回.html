@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="jp"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>XBP_Ray's デザイン演習ⅠⅡ</title>
+    <link rel="icon" href="../images/favicon.XR.PNG" sizes="any"> <!--ファビコン設定-->
+    <style>
+    /* 上部の固定文字設定 */
+    .top-left-fixed{
+        position: fixed
+        top: 10px;
+        left: 10px;
+        font-size: 18px;
+        color: #708090; /* カラーコードslategray */
+        x-index: 9999; /* ほかの要素より手前に表示 */
+        background-color: #dcdcdc; /* カラーコードgainsboro */
+        padding: 4px 8px; /* 内側の余白 */
+        border-radius: 4px;
+    }
+    /* 背景色設定 */
+    body{
+        background-color: #fffafa; /* カラーコードsnow */
+        margin: 0; /* 内側の余白 */
+        min-height: 100vh; /* 要素の高さの最小値を100％にする */
+    }
+    /*外枠(はみ出た部分を隠す)*/
+    .wrap{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    /*横並びにする部分*/
+    .slideshow{
+        display: flex;
+        width: max-content;
+        animation: slideMove 20s linear infinite;
+    }
+    /*各スライドのタイトル*/
+    .content{
+        width: 400px;
+        height: 60px;
+        background-color: #d3d3d3;/*カラーコードlightgray*/
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*アニメーションの定義*/
+    @keyframes slideMove {
+        0%{
+            transform: translateX(-50%);
+        }
+    }
+    /*マウスを乗せたときに動きを止める*/
+    .slideshow:hover {
+        animation-play-state: paused;
+    }
+    /*画像横並びの設定*/
+    .image-link-box {
+        display: flex;         /* 横並びにする */
+        gap: 30px;             /* 画像と画像の間のすき間 */
+        justify-content: center; /* 中央に配置 */
+        margin: 0px 30px 50px 30px;
+    }
+    .image-link-box a {
+        display: block;      /* リンクのクリックエリアを画像全体に広げる */
+        max-width: 100%;     /* 親要素からはみ出さないようにする */
+    } 
+    /* 画像（imgタグ）のレスポンシブ対応 */
+    .image-link-box img {
+        width: 100%;         /* 幅いっぱいに広げる */
+        height: auto;        /* 縦横比を維持する */
+        vertical-align: bottom; /* 画像の下に謎の隙間ができるのを防ぐ */
+        justify-content: center;
+    }
+    /* マウスを乗せたときの処理 */
+    .floating-img:hover {
+         /* Y軸（縦方向）に-10px移動させて上に浮かせる */
+        transform: translateY(-10px);
+      
+        /* ぼかした影をつけて立体感を出す */
+        /* 構造: 左右のズレ 上下のズレ ぼかしの強さ 影の色 */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .kadai2{
+        width: 80%;
+        color: #778899;
+        padding: 0 20px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="top-left-fixed">Ray's Portfolio</div>
+    <div style="text-align: center;"> <!-- 文字を中央に固定 -->
+        <span style="font-size: 50px; color: #708090;">XBP</span><br>
+    <span style="font-size: 20px; color: #708090;">Anthropology×Design×Technology×Business</span></div><br>
+
+    <div class="wrap">
+        <div class="slideshow">
+            <div class="content"><a href="../digi_fab/index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="../digi_fab/index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+        </div>
+    </div>
+    <br>
+    <div class="kadai2">
+    <h1>フィールドワーク：看板の写真撮影</h1><br>
+    <h2>①やよい軒</h2><h4>撮影日：2026/10/19　撮影者：ray</h4><br>
+    <img src="./images/FW.yayoi.sign.jpg" width="50%"><br>
+    <h3>和の定食屋やよい軒。最近店舗リニューアルされて新しくなった店名板を撮影。<br>
+    暖簾を表すマークにやよい軒のYが入っているところが考えらえていると感じた。店名板の背景色が木みたいで暖かさが出ている。</h3><br>
+    <hr><!--ラインを引く設定-->
+    <br>
+    <h2>②Chez Akila</h2><h4>撮影日：2026/10/19　撮影者：ray</h4><br>
+    <img src="./images/FW.french.sign.jpg" width="50%"><br>
+    <h3>少し小さめのフランス料理屋。散歩しているときに見つけて撮影。<br>
+    店名の下にフランス国旗色のアンダーラインが引かれている。よく見ると青と赤の間にもしっかりくぎられた白を表す空間がある。</h3><br>
+    <hr>
+    <br>
+    <h2>③Hibikus</h2><h4>撮影日：2026/10/19　撮影者：ray</h4><br>
+    <img src="./images/FW.hibikus.sign.jpg" width="50%"><br>
+    <h3>個人的に前から知っていて好きだった看板を撮影。<br>
+    和太鼓のスクールのこの看板、一番下の「響」という字を見てみると「HIBIKUS+音」で構成されている。</h3>
+    <hr>
+    <br>
+    <a href="#">↑一番上に戻る↑</a>
+<br></div>
+<br>
+
+
+</body>
+</html>
