@@ -56,6 +56,39 @@
     .slideshow:hover {
         animation-play-state: paused;
     }
+    .image-container {
+        display: flex;          /* 横並びにする */
+        gap: 16px;              /* 画像と画像の間のすき間 */
+        justify-content: center;/* 中央揃え（左揃えなら flex-start） */
+        align-items: center;    /* 縦位置を揃える */
+    }
+       /*画像横並びの設定*/
+    .image-link-box {
+        display: flex;         /* 横並びにする */
+        gap: 50px;             /* 画像と画像の間のすき間 */
+        justify-content: center; /* 中央に配置 */
+        margin: 0px 30px 50px 30px;
+    }
+    .image-link-box a {
+        display: block;      /* リンクのクリックエリアを画像全体に広げる */
+        max-width: 100%;     /* 親要素からはみ出さないようにする */
+    } 
+    /* 画像（imgタグ）のレスポンシブ対応 */
+    .image-link-box img {
+        width: 100%;         /* 幅いっぱいに広げる */
+        height: auto;        /* 縦横比を維持する */
+        vertical-align: bottom; /* 画像の下に謎の隙間ができるのを防ぐ */
+        justify-content: center;
+    }
+    /* 文字の調整（必要に応じて） */
+    .image-link-box p {
+        display: flex;
+        margin: 0;                 /* 余計な余白を消す */
+        font-size: 60px;           /* 文字の大きさ */
+        color:#708090;
+        justify-content: center; /* 左右方向の中央揃え */
+        align-items: center;     /*上下方向の中央揃え*/
+    }
 
     </style>
 </head>
@@ -78,6 +111,14 @@
     <br>
     
     <span style="font-size: 30px; color: #708090;"> 【デザイン演習ⅠⅡ】提出課題 </span><br>
+
+    <div class="image-link-box">
+        <a href="./index - フィールドワーク.html">
+        <img src="./images/fieldwork.PNG" width="40px"></a>
+        <p>×</p>
+        <a href="./index - デジタルスキル.html">
+        <img src="./images/digitalskill.PNG" width="40px"></a>
+        </div>
 
 
         <h2>HTMLに関すること</h2>
