@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="jp"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBP_Ray's デジタルファブリケーション</title>
+    <style>
+    /* 上部の固定文字設定 */
+    .top-left-fixed{
+        position: fixed
+        top: 10px;
+        left: 10px;
+        font-size: 18px;
+        color: #708090; /* カラーコードslategray */
+        x-index: 9999; /* ほかの要素より手前に表示 */
+        background-color: #dcdcdc; /* カラーコードgainsboro */
+        padding: 4px 8px; /* 内側の余白 */
+        border-radius: 4px;
+    }
+    /* 背景色設定 */
+    body{
+        background: linear-gradient(to bottom, #fffafa 0%, #f5f5f5 10%, #dcdcdc 11%, #c0c0c0 12%, #a9a9a9 14%);
+        margin: 0; /* 内側の余白 */
+        min-height: 100vh; /* 要素の高さの最小値を100％にする */
+    }
+    /*外枠(はみ出た部分を隠す)*/
+    .wrap{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    /*横並びにする部分*/
+    .slideshow{
+        display: flex;
+        width: max-content;
+        animation: slideMove 20s linear infinite;
+    }
+    /*各スライドのタイトル*/
+    .content{
+        width: 400px;
+        height: 60px;
+        background-color: #d3d3d3;/*カラーコードlightgray*/
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*アニメーションの定義*/
+    @keyframes slideMove {
+        0%{
+            transform: translateX(-50%);
+        }
+    }
+    /*マウスを乗せたときに動きを止める*/
+    .slideshow:hover {
+        animation-play-state: paused;
+    }
+    .base1{
+        color:#a9a9a9;
+        padding: 0 20px;
+        font-size: 30px;
+    }
+    .base2{
+        color: #fffafa;
+        padding: 0 20px;
+        font-size: 30px;
+    }
+    .border{
+	border: solid 3px #a9a9a9;
+    }
+    .use-link {
+        color: #a9a9a9; 
+    }
+    .use-link:hover {
+        color: #808080; 
+    }
+    .image-container {
+        display: flex;         /* 横並びにする */
+        gap: 10px;             /* 画像と画像の間のすき間 */
+        justify-content: center; /* 中央に配置 */
+    }
+    .image-container img {
+        width: 45%;            /* 幅の比率を指定 */
+        height: auto;          /* 比率を保ったまま高さ自動調整 */
+    }
+    .exolanation-text{
+        font-size: 25px;
+        padding: 0px 60px;
+    }
+    </style>
+</head>
+<body>
+    <div class="top-left-fixed">Ray's Portfolio</div>
+    <div style="text-align: center;"> <!-- 文字を中央に固定 -->
+        <span style="font-size: 50px; color: #708090;">XBP</span><br>
+    <span style="font-size: 20px; color: #708090;">Anthropology×Design×Technology×Business</span></div><br>
+
+    <div class="wrap">
+        <div class="slideshow">
+            <div class="content"><a href="./index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+           
+        </div>
+    </div>
+
+
+    <div class="base1">
+        <br>
+        <span style="font-size:30px;">第1回 : 3Dプリンターを使用した物作り</span><br>
+        <br>
+        <div style="padding: 10px; margin-bottom: 10px; border: 3px solid #a9a9a9; border-radius: 10px;">
+            <span style="font-size:20px;">サイズ制限(長さ50mm×幅20mm×高さ5mm)<br></span>
+            <span style="font-size: 20px;">
+                使用ソフト:<a href="https://www.autodesk.com/jp/products/fusion-360/overview#top" class="use-link">FUSION</a>
+                 & <a href="https://ultimaker.com/app/ultimaker-cura-sign-in-successful" class="use-link">UltiMarker Cura</a><br>
+            </span>
+        </div>
+        <br>
+    </div>
+    <div class="base2">
+        <br>
+        【完成図】<br>
+        <br>
+        <div class="image-container">
+            <img src="./images/kansei1.jpg">
+            <img src="./images/kansei2.jpg">
+        </div>
+        <div class="exolanation-text">
+            収納式のピンセットを作成。<br>
+            持ち歩く際、周りに引っかかってしまうピンセットを持ち運びやすくデザインしました。<br>
+        </div>
+        <br>
+        【デザインの流れ】<br>
+        <br>
+        <div class="exolanation-text">
+            1, FUSIONで平面を作成。<br>
+        </div>
+        <div class="image-container">
+            <img src="./images/pinset1.png">
+            <img src="./images/zentaizu.png">
+        </div>
+        <br>
+        <div class="exolanation-text">
+           2, 3Dを作成。<br>
+        </div>
+        <div class="image-container">
+            <img src="./images/zentairittai.png">
+            <img src="./images/asaioshidashi.png">
+        </div>
+        <div class="exolanation-text">
+            押し出し機能を使う。<br>
+            写真２枚目の薄い押し出し機能を使うことで輪郭だけを立体化させることも可能。<br>
+            <br>
+            3, Curaに移動。<br>
+        </div>
+        <div class="image-container">
+            <img src="./images/meiku.png">
+            <img src="./images/curaidou.png">
+        </div>
+        <div class="exolanation-text">
+            左の画像の左上にある「メイク」を押してCuraに移動。<br>
+            右の画像が移動した状態。<br>
+            <br>
+            4, スライスしてプリントする。<br>
+        </div>
+        <div class="image-container">
+            <img src="./images/printer1.jpg">
+            <img src="./images/printer2.jpg">
+        </div>
+        <br>
+        <div class="exolanation-text">
+            １度目：失敗 → 補佐をつけて印刷
+        </div>
+        <div class="image-container">
+            <img src="./images/sippai1.jpg">
+            <img src="./images/hosatsuki1.jpg">
+        </div>
+        <br>
+        <br>
+        【印刷済み & 完成】<br>
+        <br>
+        <div class="image-container">
+            <img src="./images/bunkai1.jpg">
+            <img src="./images/kansei1.jpg">
+        </div>
+        <br>
+        <br>
+        【補足説明】<br>
+        <br>
+        <div class="exolanation-text">
+            1, FUSIONで立体作成後、大きさを少し変えたい(左)<br>
+            2, FUSIONで平面を作成後、一つの平面を選択して押し出しをするとほかの平面図が消える。(右)<br>
+        </div>
+        <div class="image-container">
+            <img src="./images/syakudo.png">
+            <img src="./images/kaiketsu.png">
+        </div>
+        <div class="exolanation-text">
+            1, 尺度機能を使うと、比率変わらずに大きさを変えることが出来る。<br>
+            2, 設定→基本設定→一般→デザイン→「フィーチャー作成時に自動的にスケッチを非表示」をオフ<br>
+            <br>
+
+
+    </div>
+    
+</body>
+</html>
