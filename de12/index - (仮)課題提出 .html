@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="jp"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>XBP_Ray's de.課題提出</title>
+    <link rel="icon" href="../images/favicon.XR.PNG" sizes="any"> <!--ファビコン設定-->
+    <style>
+    /* 上部の固定文字設定 */
+    /*ray's portforio*/
+    .top-left-fixed{
+        position: fixed
+        top: 10px;
+        left: 10px;
+        font-size: 18px;
+        color: #708090; /* カラーコードslategray */
+        x-index: 9999; /* ほかの要素より手前に表示 */
+        background-color: #dcdcdc; /* カラーコードgainsboro */
+        padding: 4px 8px; /* 内側の余白 */
+        border-radius: 4px;
+    }
+    /*基本設定：ここから*/
+    /* 背景色設定 */
+    body{
+        background-color: #fffafa; /* カラーコードsnow */
+        margin: 0; /* 内側の余白 */
+        min-height: 100vh; /* 要素の高さの最小値を100％にする */
+    }
+    /*外枠(はみ出た部分を隠す)*/
+    .wrap{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    /*横並びにする部分*/
+    .slideshow{
+        display: flex;
+        width: max-content;
+        animation: slideMove 20s linear infinite;
+    }
+    /*各スライドのタイトル*/
+    .content{
+        width: 400px;
+        height: 60px;
+        background-color: #d3d3d3;/*カラーコードlightgray*/
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*アニメーションの定義*/
+    @keyframes slideMove {
+        0%{
+            transform: translateX(-50%);
+        }
+    }
+    /*マウスを乗せたときに動きを止める*/
+    .slideshow:hover {
+        animation-play-state: paused;
+    }
+    /*基本設定：ここまで*/
+    .timeline-container {
+        width: flex;
+        margin: 50px 200px;
+        color: #808080;
+    }
+
+    .timeline-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #808080;
+        padding-bottom: 8px;
+        margin-bottom: 40px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .timeline-header a{
+        color:#808080;
+        text-decoration: none;
+    }
+    .timeline-header a:hover{
+        text-decoration: underline;
+    }
+    .timeline {
+        position: relative;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background-color: #808080;
+        transform: translateX(-50%)
+    }
+    .item {
+        display: grid;
+        grid-template-columns: 1fr 30px 1fr; /*左側/中央(丸用幅)/右側*/
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    /*中央の黒丸*/
+    .center-dot {
+        grid-column: 2;
+        width: 20px;
+        height: 20px;
+        background-color: #808080;
+        border-radius: 50%;
+        justify-self: center;
+        z-index: 1;
+    }
+    /*中央のリンク・日付スタイル*/
+    .item a {
+        color: #808080;
+        text-decoration: none;
+        font-size: 25px;
+    }
+    .item a:hover {
+        text-decoration: underline;
+    }
+    .item .date {
+        font-size: 16px;
+        font-weight: bold;
+        color:#808080;
+    }
+    /*横の引き出し線*/
+    .item .line {
+        flex-grow: 1;
+        height: 1px;
+        background-color: #808080;
+    }
+    /*A,左側にリンクがある場合*/
+    .left-link .content-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .left-link .content-left .line {
+        margin-left: 12px;/*文字と線の間の隙間*/
+    }
+    .left-link .content-right {
+        display: flex;
+        align-items: center;
+        padding-left: 8px;/*丸と日付の間の隙間*/
+    }
+    /*B,右側にリンクがある場合*/
+    .right-link .content-left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 8px;
+    }
+    .right-link .content-right {
+        display: flex;
+        align-items: center;
+    }
+    .right-link .content-right .line {
+        margin-right: 12px;
+    }
+    </style>
+</head>
+<body>
+<!--基本：ここから-->>
+    <div class="top-left-fixed">Ray's Portfolio</div>
+    <div style="text-align: center;"> <!-- 文字を中央に固定 -->
+        <span style="font-size: 50px; color: #708090;">XBP</span><br>
+    <span style="font-size: 20px; color: #708090;">Anthropology×Design×Technology×Business</span></div><br>
+
+    <div class="wrap">
+        <div class="slideshow">
+            <div class="content"><a href="../digi_fab/index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="../digi_fab/index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+        </div>
+    </div>
+    <br>
+<!--基本：ここまで-->
+<br>
+<br>
+<span style="font-size: 30px; color: #808080;">2026年後学期</span>
+<div class="timeline-container">
+    <div class="timeline-header">
+        <a href="./index - フィールドワーク.html">Fieldwork</a>
+        <a href="./index - デジタルスキル.html">DigitalSkill</a>
+    </div>
+    
+    <div class="timeline">
+
+        <!--第一回-->
+        <div class="item right-link">
+            <div class="content-left">
+                <span class="date">10/6</span>
+            </div>
+            <div class="center-dot"></div>
+            <div class="content-right">
+                <span class="line"></span>
+                <a href="./html1.html">[HEMLとは]</a>
+            </div>
+        </div>
+
+        <div class="item right-link">
+            <div class="content-left">
+                <span class="date">10/6</span>
+            </div>
+            <div class="center-dot"></div>
+            <div class="content-right">
+                <span class="line"></span>
+                <a href="./git1.html">[GITとは]</a>
+            </div>
+        </div>
+
+
+        <!--第二回-->
+        <div class="item left-link">
+            <div class="content-left">
+                <a href="./第二回.html">[路上観察１]</a>
+                <span class="line"></span>
+            </div>
+            <div class="center-dot"></div>
+            <div class="content-right">
+                <span class="date">10/13</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
