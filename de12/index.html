@@ -83,12 +83,24 @@
         /* 構造: 左右のズレ 上下のズレ ぼかしの強さ 影の色 */
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
+    /* PC向けの基本スタイル */
+    .container {
+        width: 960px;
+    }
 
+    /* スマホ向け（画面幅が750px以下の場合に適用） */
+    @media screen and (max-width: 750px) {
+        .container {
+            width: 100%;
+            padding: 0 4%;
+        }
+    }
 
 
     </style>
 </head>
 <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <div class="top-left-fixed">Ray's Portfolio</div>
     <div style="text-align: center;"> <!-- 文字を中央に固定 -->
         <span style="font-size: 50px; color: #708090;">XBP</span><br>
@@ -118,7 +130,7 @@
         </a>
         </div><br>
     
-    <span style="font-size: 30px; color: #708090;"> デザイン演習とは </span><br>
+    <span style="font-size: 20px; color: #708090;"> デザイン演習とは </span><br>
 
     
 <br>
