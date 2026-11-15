@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="jp"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBP_Ray's デジタルファブリケーション</title>
+    <style>
+    /* 上部の固定文字設定 */
+    .top-left-fixed{
+        position: flex;
+        top: 10px;
+        left: 10px;
+        font-size: 18px;
+        color: #708090; /* カラーコードslategray */
+        x-index: 9999; /* ほかの要素より手前に表示 */
+        background-color: #dcdcdc; /* カラーコードgainsboro */
+        padding: 4px 8px; /* 内側の余白 */
+        border-radius: 4px;
+    }
+    /*外枠(はみ出た部分を隠す)*/
+    .wrap{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    /*横並びにする部分*/
+    .slideshow{
+        display: flex;
+        width: max-content;
+        animation: slideMove 20s linear infinite;
+    }
+    /*各スライドのタイトル*/
+    .content{
+        width: 400px;
+        height: 60px;
+        background-color: #d3d3d3;/*カラーコードlightgray*/
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*アニメーションの定義*/
+    @keyframes slideMove {
+        0%{
+            transform: translateX(-50%);
+        }
+    }
+    /*マウスを乗せたときに動きを止める*/
+    .slideshow:hover {
+        animation-play-state: paused;
+    }
+    .base1{
+        color:#a9a9a9;
+        padding: 0 20px;
+        font-size: 30px;
+    }
+    .base2{
+        color: #fffafa;
+        padding: 0 20px;
+        font-size: 30px;
+    }
+    .border{
+	border: solid 3px #a9a9a9;
+    }
+    .use-link {
+        color: #a9a9a9; 
+    }
+    .use-link:hover {
+        color: #808080; 
+    }
+    .image-container {
+        display: flex;         /* 横並びにする */
+        gap: 10px;             /* 画像と画像の間のすき間 */
+        justify-content: center; /* 中央に配置 */
+    }
+    .image-container img {
+        width: 45%;            /* 幅の比率を指定 */
+        height: auto;          /* 比率を保ったまま高さ自動調整 */
+    }
+    .exolanation-text{
+        font-size: 25px;
+        padding: 0px 60px;
+    }
+    .h1{
+        display: flex;
+        padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+        color: #a9a9a9;/*文字色*/
+        background: #f5f5f5;/*背景色*/
+        border-left: solid 10px #dcdcdc;/*左線*/
+        border-bottom: solid 7px #c0c0c0;/*下線*/
+    }
+    .h2{
+        margin: 10px 10px;
+        padding: 0.25em 0.5em;/*上下 左右の余白*/
+        color: #a9a9a9;/*文字色*/
+        background: transparent;/*背景透明に*/
+        border-left: solid 10px #708090;/*左線*/
+        font-size: 25px
+    }
+    .link-reference{
+        color:#a9a9a9;
+        font-size:20px;
+    }
+    .link-reference:hover{
+        color:#808080;
+    }
+    </style>
+</head>
+<body>
+    <div class="top-left-fixed">Ray's Portfolio</div>
+    <div style="text-align: center;"> <!-- 文字を中央に固定 -->
+        <span style="font-size: 50px; color: #708090;">XBP</span><br>
+    <span style="font-size: 20px; color: #708090;">Anthropology×Design×Technology×Business</span></div><br>
+
+    <div class="wrap">
+        <div class="slideshow">
+            <div class="content"><a href="./index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+           
+        </div>
+    </div>
+
+
+    <div class="base1">
+        <br>
+        <span style="font-size:30px;">第2回 : レーザーカッターを使用した物作り </span><br>
+        <br>
+        <div style="padding: 10px; margin-bottom: 10px; border: 3px solid #a9a9a9; border-radius: 10px;">
+            <span style="font-size:20px;">サイズ制限(長さ50mm×幅20mm×高さ5mm)<br></span>
+            <span style="font-size: 20px;">
+                使用ソフト:<a href="https://www.autodesk.com/jp/products/fusion-360/overview#top" class="use-link">FUSION</a>
+                 & <a href="https://www.adobe.com/jp/products/illustrator/features.html" class="use-link">Adobe Illustrator</a><br>
+            </span>
+        </div>
+        <br>
+        <span class="h1">身近なものと関連付けて、今の関係を変えるようなアイデア</span>
+        <br>
+        <ul>
+            <span style="font-size:25px;">
+                <li>身近なもの：名詞</li>
+                <li>現在の関係：お渡しできるものがなく、頂いた名刺も財布の上に置いている。<br>
+                    　　　　　　<strong>将来</strong>持つものだという認識。
+                </li>
+            </span>
+        </ul>
+        <strong><span style="font-size:30px; color:#808080;">【将来という認識を改め、目標の経営者までの距離を近づける第一歩】</span></strong>
+        <ul>
+            <span style="font-size:25px;">
+                <li>これを見たとき、何度躓いても目標に向けて再び立ち上がれるような名刺入れを作る。</li>
+            </span>
+        </ul>
+        <br>
+        <span class="h1">アイデアを形にする</span>
+        <br>
+        <span class="h2">１,設計図</span><br>
+        <br>
+        <img src="./images/sekkeizu_meishiire.png" width="40%">
+        <a href="https://www.troteclaser.com/ja/helpcenter/materials/application-techniquesbending-technique" class="link-reference">ナローウェーブ参考：trotec</a><br>
+        <br>
+        <span style="font-size:30px;">
+            FUSIONで設計。その後illustratorで整える。
+        </span>
+        <br>
+        <br>
+        <span class="h2">２，レーザーカッターで作成</span><br>
+        <br>
+        <img src="./images/sakuseityu_zentai.jpg" width="45%">
+        <img src="./images/sakuseityu_ichibu.jpg" width="45%">
+        <br>
+        <br>
+        <span class="h2">３，完成</span><br>
+        <br>
+        <img src="./images/kanseizu.meishiire.jpg" width="40%"><br>
+        <br>
+        <br>
+        <span class="h2">４,振り返り</span><br>
+        <br>
+        <img src="./images/kanseizu2_meishi.jpg" width="40%">
+        <img src="./images/kanseizu3_meishi.jpg" width="40%"><br>
+        <ul>
+            <span style="font-size:25px;">
+                <li>少し大きくなってしまった。名刺を縦向きで入れて、２枚並べられるくらいの大きさ。</li>
+                <li>閉めたときの固定具を考えていなかった。ゴムをつけることで解決。</li>
+                <li>レーザーカッターに固定する際、マスキングテープを使用したが、その部分だけ焼け跡がつかず、変に明るい部分が出来た。</li>
+                <li>FUSIONで設計している際、ナローウェーブの部分が多すぎて重くなってしまった。</li>
+            </span>
+        </ul>
+
+        <a href="#" class="use-link">↑一番上に戻る↑</a>
+    </div>
+
+</body>
+</html>
