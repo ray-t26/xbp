@@ -21,6 +21,9 @@
         background-color: #fffafa; /* カラーコードsnow */
         margin: 0; /* 内側の余白 */
         min-height: 100vh; /* 要素の高さの最小値を100％にする */
+        overflow-x: hidden;
+        width: 100%;
+        padding: 0;
     }
     /*外枠(はみ出た部分を隠す)*/
     .wrap{
@@ -72,7 +75,8 @@
         transition: all 0.3s ease;
     }
     .btn-right{
-        text-align: right;
+        display: flex;
+        align-items: center;  
     }
     .under-line{
         font-size: 15px;
@@ -80,17 +84,10 @@
         margin-left: 10px;
         white-space: nowrap;
     }
-     /* PC向けの基本スタイル */
-    .container {
-        width: 960px;
-    }
-
-    /* スマホ向け（画面幅が750px以下の場合に適用） */
-    @media screen and (max-width: 750px) {
-        .container {
-            width: 100%;
-            padding: 0 4%;
-        }
+    .btn::after {
+        content: "＞";
+        position: absolute;
+        right: 15px;
     }
     </style>
 </head>
@@ -103,13 +100,12 @@
 
     <div class="wrap">
         <div class="slideshow">
-            <div class="content"><a href="./index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
             <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
             <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
-            <div class="content"><a href="./index.html" style="color: #808080;">デジタルファブリケーション</a></div>
             <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
             <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
-           
+            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>           
         </div>
     </div>
     <br>
@@ -119,13 +115,11 @@
         Section01<br>
         <span class="under-line">3Dプリンター<br>
         ピンセット</span>
-        <div class="btn-right">　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＞</div>
     </a>
     <a href="./section2.html" class="btn">
         Section02<br>
         <span class="under-line">レーザーカッター<br>
         名刺入れ</span>
-        <div class="btn-right">　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＞</div>
     </a>
 
 

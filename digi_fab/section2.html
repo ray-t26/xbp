@@ -4,6 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XBP_Ray's デジタルファブリケーション</title>
     <style>
+    body{
+        background-color: #fffafa; /* カラーコードsnow */
+        margin: 0; /* 内側の余白 */
+        min-height: 100vh; /* 要素の高さの最小値を100％にする */
+        overflow-x: hidden;
+        width: 100%;
+        padding: 0;
+    }
     /* 上部の固定文字設定 */
     .top-left-fixed{
         position: flex;
@@ -56,7 +64,7 @@
     .base2{
         color: #fffafa;
         padding: 0 20px;
-        font-size: 30px;
+        font-size: 25px;
     }
     .border{
 	border: solid 3px #a9a9a9;
@@ -74,7 +82,7 @@
     }
     .image-container img {
         width: 45%;            /* 幅の比率を指定 */
-        height: auto;          /* 比率を保ったまま高さ自動調整 */
+        height:fit-content;          /* 比率を保ったまま高さ自動調整 */
     }
     .exolanation-text{
         font-size: 25px;
@@ -114,12 +122,11 @@
     <div class="wrap">
         <div class="slideshow">
             <div class="content"><a href="./index.html" style="color: #808080;">デジタルファブリケーション</a></div>
-            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
             <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
             <div class="content"><a href="./index.html" style="color: #808080;">デジタルファブリケーション</a></div>
-            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
             <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
-           
+            <div class="content"><a href="../de12/index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
         </div>
     </div>
 
@@ -189,7 +196,8 @@
             </span>
         </ul>
 
-        <a href="#" class="use-link">↑一番上に戻る↑</a>
+        <a href="#" class="use-link" style="font-size:15px;">↑一番上に戻る↑</a>
+        <br>
     </div>
 
 </body>
