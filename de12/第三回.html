@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="jp"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>XBP_Ray's デザイン演習ⅠⅡ</title>
+    <link rel="icon" href="../images/favicon.XR.PNG" sizes="any"> <!--ファビコン設定-->
+    <style>
+    /* 上部の固定文字設定 */
+    .top-left-fixed{
+        position: flex;
+        top: 10px;
+        left: 10px;
+        font-size: 18px;
+        color: #708090; /* カラーコードslategray */
+        x-index: 9999; /* ほかの要素より手前に表示 */
+        background-color: #dcdcdc; /* カラーコードgainsboro */
+        padding: 4px 8px; /* 内側の余白 */
+        border-radius: 4px;
+    }
+    /* 背景色設定 */
+    body{
+        background-color: #fffafa; /* カラーコードsnow */
+        margin: 0; /* 内側の余白 */
+        min-height: 100vh; /* 要素の高さの最小値を100％にする */
+    }
+    /*外枠(はみ出た部分を隠す)*/
+    .wrap{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    /*横並びにする部分*/
+    .slideshow{
+        display: flex;
+        width: max-content;
+        animation: slideMove 20s linear infinite;
+    }
+    /*各スライドのタイトル*/
+    .content{
+        width: 400px;
+        height: 60px;
+        background-color: #d3d3d3;/*カラーコードlightgray*/
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*アニメーションの定義*/
+    @keyframes slideMove {
+        0%{
+            transform: translateX(-50%);
+        }
+    }
+    /*マウスを乗せたときに動きを止める*/
+    .slideshow:hover {
+        animation-play-state: paused;
+    }
+    /*画像横並びの設定*/
+    .image-link-box {
+        display: flex;         /* 横並びにする */
+        gap: 30px;             /* 画像と画像の間のすき間 */
+        justify-content: center; /* 中央に配置 */
+        margin: 0px 30px 50px 30px;
+    }
+    .image-link-box a {
+        display: block;      /* リンクのクリックエリアを画像全体に広げる */
+        max-width: 100%;     /* 親要素からはみ出さないようにする */
+    } 
+    /* 画像（imgタグ）のレスポンシブ対応 */
+    .image-link-box img {
+        width: 100%;         /* 幅いっぱいに広げる */
+        height: auto;        /* 縦横比を維持する */
+        vertical-align: bottom; /* 画像の下に謎の隙間ができるのを防ぐ */
+        justify-content: center;
+    }
+    /* マウスを乗せたときの処理 */
+    .floating-img:hover {
+         /* Y軸（縦方向）に-10px移動させて上に浮かせる */
+        transform: translateY(-10px);
+      
+        /* ぼかした影をつけて立体感を出す */
+        /* 構造: 左右のズレ 上下のズレ ぼかしの強さ 影の色 */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .kadai2{
+        width: 80%;
+        color: #778899;
+        padding: 0 20px;
+    }
+    .case{
+        display: flex;
+        max-width: 100%;
+        width: 80%;
+        padding: 0 10px;
+    }
+    .case image{
+        width: 40%;
+    }
+    .case ul{
+        font-size:20px;
+        color:#778899;
+        
+    }
+
+    </style>
+</head>
+<body>
+    <div class="top-left-fixed">Ray's Portfolio</div>
+    <div style="text-align: center;"> <!-- 文字を中央に固定 -->
+        <span style="font-size: 50px; color: #708090;">XBP</span><br>
+    <span style="font-size: 18px; color: #708090;">Anthropology×Design×Technology×Business</span></div><br>
+
+    <div class="wrap">
+        <div class="slideshow">
+            <div class="content"><a href="../digi_fab/index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+            <div class="content"><a href="../digi_fab/index.html" style="color: #808080;">デジタルファブリケーション</a></div>
+            <div class="content"><a href="./index.html" style="color: #808080;">デザイン演習ⅠⅡ</a></div>
+            <div class="content"><a href="../index.html" style="color: #808080;">Topページ</a></div>
+        </div>
+    </div>
+    <br>
+    <div class="kadai2">
+        <br>
+        <span style="font-size:30px;">1,客種別決済方法</span><br>
+    </div>
+    <div class="case">
+        <img src="./images/スクリーンショット 2026-11-16 163854.png" width="60%">
+        <ul>
+            <li>客種に寄らず、決済方法の割合はあまり変わらない</li>
+            <li>会社員→学生→観光客の順番で購入数が多い</li><br>
+        </ul>
+    </div>
+    <div class="kadai2">
+        <br>
+        <span style="font-size:30px;">2,月ごとの顧客数(客種別)</span><br>
+    </div>
+    <div class="case">
+        <img src="./images/スクリーンショット 2026-11-16 163920.png" width="60%">
+        <ul>
+            <li>学生は２，３月、８，９月が少ない(長期休みだから？)</li>
+        </ul>
+    </div>
+    <div class="kadai2">
+        <br>
+        <span style="font-size:30px;">3,顧客別購入料金表</span><br>
+    </div>
+    <div class="case">
+        <img src="./images/スクリーンショット 2026-11-16 163954.png" width="60%">
+        <ul>
+            <li>学生は安いものを買う</li>
+            <li>会社員は安すぎず、高くないものを買う</li>
+            <li>観光客は、安いものを買う客層と高いものを好んで買う人がいる</li>
+            <li>中間の値段はほとんどが会社員向けの商品といえる。</li>
+        </ul>
+    </div>
+    <div class="kadai2">
+        <br>
+        <span style="font-size:30px;">4,客種別購入商品のカロリー</span><br>
+    </div>
+    <div class="case">
+        <img src="./images/スクリーンショット 2026-11-16 164010.png" width="60%">
+        <ul>
+            <li>学生はカロリーが高いものを好む</li><strong>=安い商品はカロリーを高めに作られている</strong>
+            <li>会社員はあまりカロリー高いものは購入しない</li>
+        </ul>
+    </div>
+    <div class="kadai2">
+        <br>
+        <span style="font-size:30px;">5,商品タイプ別カロリー表</span><br>
+    </div>
+    <div class="case">
+        <img src="./images/スクリーンショット 2026-11-16 164044.png" width="60%">
+        <ul>
+            <li>すべて高いもの、中間層、低いものそれぞれの商品が作られている</li>
+            <li>セットはカロリー低いものが好まれている</li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <a href="#" style="color: #778899;">↑一番上に戻る↑</a>
+    <br>
+    <br>
+</body>
