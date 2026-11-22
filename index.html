@@ -22,6 +22,9 @@
         background-color: #fffafa; /* カラーコードsnow */
         margin: 0; /* 内側の余白 */
         min-height: 100vh; /* 要素の高さの最小値を100％にする */
+        transform: scale(0.8);
+        transform-origin: top left; /* 左上を起点に縮小 */
+        width: 125%                 /* scale(0.8) の逆数（1÷0.8 = 1.25）を指定して幅の崩れを防ぐ */
     }
     /*外枠(はみ出た部分を隠す)*/
     .wrap{
