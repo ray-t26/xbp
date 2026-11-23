@@ -1,0 +1,161 @@
+def introduce_game():
+    print("植物育成ゲーム")
+    print("endは全部で4種類です。準備はいいですか？")
+    choice = input("Start")
+    if choice =="Start":
+        start_game()
+    else :
+        print("植物は枯れてしまった…")
+def start_game():
+    counts_water = {"1":0}
+    counts_light = {"2":0}
+    while True:
+        print("元気な植物を育てましょう。")
+        print("どちらを与えますか？")
+        choice = input("1:水,2:光")
+        if choice =="1":
+            print("水を与えた")
+            counts_water[choice] += 1 #水カウントを1増やす
+            if counts_water-counts_light>=30:
+                print("水の与えすぎでエラ呼吸に進化した！！")
+                fishplant_game()
+            if counts_water ==100:
+                print("植物は元気に育った。")
+                print("end1:成功エンド")
+                print("遊んでいただきありがとうございました。是非他のエンドも見つけてみてください。")
+                introduce_game()
+            if counts_water ==35:
+                print("葉が大きくなった。")
+        elif choice =="2":
+            print("光を与えた")
+            counts_light[choice] +=1 #光カウントを1増やす
+            if counts_light-counts_water>=10:
+                print("植物は干からびてしまった…")
+                print("end2:干物エンド")
+                print("新しく始めますか？")
+                choice = input("1:新しく始める")
+                if choice =="1":
+                    start_game()
+                else:
+                    print("その選択肢はありません。")
+            if counts_light ==100:
+                print("植物は元気に育った。")
+                print("end1:成功エンド")
+                print("遊んでいただきありがとうございました。是非他のエンドも見つけてみてください。")
+                introduce_game()
+            if counts_light ==30:
+                print("幹が太くなった。")
+                
+def fishplant_game():
+    counts_water = {"1":0}
+    counts_light = {"2":0}
+    counts_uni = {"3":0}
+    while True:
+        print("元気な植物を育てましょう。")
+        print("どれを与えますか？")
+        choice = input("1:水,2:光,3:ウニ")
+        if choice =="1":
+            print("水を与えた")
+            counts_water[choice] += 1
+            if counts_water+counts_light-counts_uni-counts_uni>=10:
+                print("植物は暴走した！")
+                print("植物はウニを食べたがっている！")
+            if counts_water+counts_light-counts_uni-counts_uni>=20:
+                print("植物は逃げ出した！！")
+                print("end6:脱走エンド")
+                print("新しく始めますか？")
+                choice = input("1:新しく始める,2:進化後から始める")
+                if choice =="1":
+                    start_game()
+                elif choice =="2":
+                    fishplant_game()
+                else:
+                    print("その選択肢は無効です。")
+            if counts_water-counts_light>=30:
+                print("植物は元気に泳いでいった…")
+                print("end5:親離れエンド")
+                choice = input("1:新しく始める,2:進化後から始める")
+                if choice =="1":
+                    start_game()
+                elif choice =="2":
+                    fishplant_game()
+                else:
+                    print("その選択肢は無効です。")
+
+        if choice =="2":
+            print("光を与えた")
+            counts_light[choice] += 1
+            if counts_water+counts_light-counts_uni-counts_uni>=10:
+                print("植物は暴走した！")
+                print("植物はウニを食べたがっている！")
+            if counts_water+counts_light-counts_uni-counts_uni>=20:
+                print("植物は逃げ出した！！")
+                print("end6:脱走エンド")
+                print("新しく始めますか？")
+                choice = input("1:新しく始める,2:進化後から始める")
+                if choice =="1":
+                    start_game()
+                elif choice =="2":
+                    fishplant_game()
+                else:
+                    print("その選択肢は無効です。")
+            if counts_light-counts_water>=10:
+                print("【危険】植物は酸欠状態である！！")
+            if counts_light-counts_water>=20:
+                print("植物は窒息してしまった…")
+                print("end7:Deth end")
+                print("新しく始めますか？")
+                choice = input("1:新しく始める,2:進化後から始める")
+                if choice =="1":
+                    start_game()
+                elif choice =="2":
+                    fishplant_game()
+                else:
+                    print("お墓に埋めましょう")
+                    dig_last()
+        if choice =="3":
+            print("うにを与えた")
+            counts_uni[choice] += 1
+            if counts_uni-counts_light>=20:
+                print("植物は喜んでいる")
+            if counts_uni-counts_water>=20:
+                print("植物は嬉しそうだ")
+            if counts_uni+counts_uni-counts_water-counts_light>=40:
+                print("植物は笑顔で天寿を全うした。")
+                print("end3:幸せエンド")
+                choice = input("1:新しく始める,2:進化後から始める")
+                if choice =="1":
+                    start_game()
+                elif choice =="2":
+                    fishplant_game()
+                else:
+                    print("その選択肢は無効です。")
+            
+                
+
+def dig_last():
+    counts_dig ={"A":0}
+    print("Aを連打して穴を掘りましょう")
+    choice = input("A")
+    if choice =="A":
+        counts_dig[choice] += 1
+    else:
+        print("その操作は無効です。")
+    if counts_dig >60:
+        print("埋める穴が掘れました")
+        choice =input("1,埋める")
+        if choice =="1":
+            print("最後まで遊んでいただきありがとうございました。植物は旅立ちました。")
+            print("新しい子をお迎えしますか？")
+            choice = input("1:はい,2:いいえ")
+            if choice =="1":
+                print("(..?):僕のことを忘れちゃうの…？")
+                print("end4:呪いエンド")
+                introduce_game()
+            if choice =="2":
+                print("(..?):来世こそ…")
+                introduce_game()
+            else:
+                print("その操作は無効です。")
+        else:
+            print("その操作は無効です。")
