@@ -1,6 +1,6 @@
 def introduce_game():
     print("植物育成ゲーム")
-    print("endは全部で4種類です。準備はいいですか？")
+    print("endは全部で7種類です。準備はいいですか？")
     choice = input("Start")
     if choice =="Start":
         start_game()
